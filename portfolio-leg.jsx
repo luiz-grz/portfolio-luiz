@@ -176,7 +176,7 @@ function Nav() {
       <a href="#" style={{
         fontFamily: "var(--font-head)", fontWeight: 800, fontSize: "1.2rem",
         color: "var(--elec)", textDecoration: "none", letterSpacing: "0.04em",
-      }}>LEG.</a>
+      }}>L\GRZ.</a>
 
       {/* Desktop links */}
       <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}
