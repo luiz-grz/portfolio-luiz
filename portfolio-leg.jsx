@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import InteractiveCursor from "./InteractiveCursor.jsx";
+import ImageCarousel from "./ImageCarousel.jsx";
 
 /* ─── CSS VARIABLES & GLOBAL STYLES ────────────────────────────────── */
 const GLOBAL_CSS = `
@@ -193,18 +194,7 @@ function Nav() {
             {l}
           </a>
         ))}
-        <a href="mailto:leduardorgarcez@gmail.com"
-          style={{
-            fontFamily: "var(--font-mono)", fontSize: "0.78rem",
-            color: "var(--elec)", textDecoration: "none", fontWeight: 500,
-            padding: "6px 16px", border: "1px solid rgba(56,182,255,0.3)",
-            borderRadius: "6px", letterSpacing: "0.04em",
-            transition: "all 0.2s",
-          }}
-          onMouseEnter={e => { e.currentTarget.style.background = "rgba(56,182,255,0.08)"; e.currentTarget.style.borderColor = "var(--elec)"; }}
-          onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "rgba(56,182,255,0.3)"; }}>
-          Hire Me
-        </a>
+        
       </div>
 
       {/* Hamburger */}
@@ -347,7 +337,8 @@ function Hero() {
             fontSize: "clamp(1.5rem, 4vw, 2.8rem)",
             lineHeight: 1.05, letterSpacing: "-0.02em",
             color: "var(--text)", marginBottom: "1.5rem",
-          }}><span style={{ display: "block" }}>Luiz</span>
+          }}>
+            <span style={{ display: "block" }}>Luiz</span>
             <span style={{
               display: "block",
               background: "linear-gradient(90deg, var(--elec), var(--cyan))",
@@ -355,7 +346,7 @@ function Hero() {
               backgroundClip: "text",
             }}>Eduardo</span>
             <span style={{ display: "block" }}>Garcez</span>
-            </h2>
+          </h2>
           <h1 style={{
             fontFamily: "var(--font-head)", fontWeight: 800,
             fontSize: "clamp(2.8rem, 6vw, 5.2rem)",
@@ -371,7 +362,7 @@ function Hero() {
             }}>Developer</span>
             <span style={{ display: "block" }}>+ Infra</span>
           </h1>
-          
+
           {/* Subheadline */}
           <p style={{
             fontFamily: "var(--font-body)", fontWeight: 300,
@@ -379,9 +370,9 @@ function Hero() {
             color: "var(--text-dim)", maxWidth: 520, lineHeight: 1.8,
             marginBottom: "2.5rem",
           }}>
-            Desenvolvo interfaces de alta performance com React e TypeScript, 
-            unindo excelência no front-end a uma infraestrutura de redes robusta. 
-            Responsável por todas as etapas do projeto, garantindo estabilidade e 
+            Desenvolvo interfaces de alta performance com React e TypeScript,
+            unindo excelência no front-end a uma infraestrutura de redes robusta.
+            Responsável por todas as etapas do projeto, garantindo estabilidade e
             escalabilidade do cliente ao servidor. Baseado em Niterói, RJ.
           </p>
 
@@ -433,8 +424,8 @@ function Hero() {
         <div style={{
           display: "flex", flexDirection: "column", gap: "0.75rem", minWidth: 220,
         }} className="hero-stats">
-          <StatCard value={5} label="PROJETOS ENTREGUES" icon={ICONS.star} />
-          <StatCard value={3} label="ANOS DE EXPERIÊNCIA" suffix="+" icon={ICONS.zap} />
+          <StatCard value={5} label="PROJETOS ENTREGUES" suffix="+" icon={ICONS.star} />
+          <StatCard value={1} label="ANO DE EXPERIÊNCIA" suffix="+" icon={ICONS.zap} />
           <StatCard value={2} label="IDIOMAS FLUENTES" icon={ICONS.globe} />
           <StatCard value={7} label="CURSOS COMPLEMENTARES" icon={ICONS.book} />
         </div>
@@ -618,9 +609,11 @@ function Skills() {
 /* ─── PROJECTS ──────────────────────────────────────────────────────── */
 const PROJECTS = [
   {
-    num: "01", featured: true,
-    tags: ["React","TypeScript","Vite","Supabase","PostgreSQL","RLS","RBAC"],
-    title: "Gestão Clínica — Espaço CuidadosMente",
+    num: "01",
+    featured: true,
+    carousel: true,
+    tags: ["React", "TypeScript", "Vite", "Supabase", "PostgreSQL", "RLS", "RBAC"],
+    title: "Gestão Clínica — Espaço CuidadosaMente",
     desc: "Solução fullstack robusta que digitalizou completamente a operação da clínica, automatizando agendamentos, controle financeiro e gestão de pacientes.",
     problem: "Processos 100% manuais em papel",
     result: "Operação totalmente digitalizada",
@@ -630,11 +623,12 @@ const PROJECTS = [
   {
     num: "02", featured: false,
     tags: ["HTML","CSS","JavaScript"],
-    title: "Site Institucional — CuidadosMente",
+    title: "Site Institucional — CuidadosaMente",
     desc: "Site institucional integrando identidade visual da clínica com funcionalidades de suporte interno e atendimento ao cliente.",
     problem: "Presença digital inexistente",
     result: "Identidade digital completa",
     link: "https://github.com/luiz-grz/espa-o-cuidadosamente",
+    liveUrl: "https://espacocuidadosamentesite.netlify.app/",
     color: "#FFB347",
   },
   {
@@ -645,6 +639,7 @@ const PROJECTS = [
     problem: "Cálculos manuais lentos",
     result: "Ferramenta ágil e precisa",
     link: "https://github.com/luiz-grz/calculadora-ip",
+    // liveUrl: "https://...",
     color: "#00D4FF",
   },
   {
@@ -655,6 +650,7 @@ const PROJECTS = [
     problem: "Aprendizado via projeto prático",
     result: "Jogo publicado e funcional",
     link: "https://github.com/luiz-grz/DOGO-WORLD",
+    liveUrl: "https://the-dogo-world.netlify.app/",
     color: "#7B61FF",
   },
   {
@@ -665,9 +661,38 @@ const PROJECTS = [
     problem: "Ausência de material interativo",
     result: "Site educacional responsivo",
     link: "https://github.com/luiz-grz/StudyMath",
+    liveUrl: "https://reforcostudymath.netlify.app/",
     color: "#00FF88",
   },
 ];
+
+/* ─── LINK BUTTON helper (reutilizado nos dois botões) ──────────────── */
+function LinkButton({ href, icon, label, color }) {
+  return (
+    <a href={href} target="_blank" rel="noreferrer"
+      style={{
+        display: "inline-flex", alignItems: "center", gap: 6,
+        fontFamily: "var(--font-mono)", fontSize: "0.75rem",
+        color: color, textDecoration: "none",
+        padding: "6px 14px",
+        border: `1px solid ${color}30`,
+        borderRadius: 8,
+        transition: "all 0.25s cubic-bezier(0.34,1.56,0.64,1)",
+      }}
+      onMouseEnter={e => {
+        e.currentTarget.style.background = `${color}10`;
+        e.currentTarget.style.transform = "translateX(3px)";
+      }}
+      onMouseLeave={e => {
+        e.currentTarget.style.background = "transparent";
+        e.currentTarget.style.transform = "translateX(0)";
+      }}>
+      <Icon d={icon} size={13} color={color} />
+      {label}
+      <Icon d={ICONS.external} size={12} color={color} />
+    </a>
+  );
+}
 
 function ProjectCard({ project, featured }) {
   const [hovered, setHovered] = useState(false);
@@ -755,31 +780,24 @@ function ProjectCard({ project, featured }) {
           }}>{project.result}</span>
         </div>
 
-        {/* GitHub link */}
-        <a href={project.link} target="_blank" rel="noreferrer"
-          style={{
-            display: "inline-flex", alignItems: "center", gap: 6,
-            fontFamily: "var(--font-mono)", fontSize: "0.75rem",
-            color: project.color, textDecoration: "none",
-            padding: "6px 14px",
-            border: `1px solid ${project.color}30`,
-            borderRadius: 8,
-            transition: "all 0.25s cubic-bezier(0.34,1.56,0.64,1)",
-          }}
-          onMouseEnter={e => {
-            e.currentTarget.style.background = `${project.color}10`;
-            e.currentTarget.style.transform = "translateX(3px)";
-          }}
-          onMouseLeave={e => {
-            e.currentTarget.style.background = "transparent";
-            e.currentTarget.style.transform = "translateX(0)";
-          }}>
-          <Icon d={ICONS.github} size={13} color={project.color} />
-          Ver no GitHub
-          <Icon d={ICONS.external} size={12} color={project.color} />
-        </a>
+        {/* ── Botões: GitHub sempre visível + Ver Site só se liveUrl existir ── */}
+        <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+          <LinkButton
+            href={project.link}
+            icon={ICONS.github}
+            label="Ver no GitHub"
+            color={project.color}
+          />
+          {project.liveUrl && (
+            <LinkButton
+              href={project.liveUrl}
+              icon={ICONS.globe}
+              label="Ver Site"
+              color={project.color}
+            />
+          )}
+        </div>
       </div>
-      
     </div>
   );
 }
