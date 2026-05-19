@@ -815,7 +815,7 @@ const PROJECTS = [
     link: "https://github.com/luiz-grz/StudyMath",
     liveUrl: "https://reforcostudymath.netlify.app/",
     color: "#00FF88",
-    videoUrl: "videos/Study_math (1).mp4",
+    videoUrl: "/videos/Study_math (1).mp4",
   },
   {
     num: "03",
@@ -827,7 +827,7 @@ const PROJECTS = [
     link: "https://github.com/luiz-grz/espa-o-cuidadosamente",
     liveUrl: "https://espacocuidadosamentesite.netlify.app/",
     color: "#FFB347",
-    videoUrl: "videos/site_espaco.mp4",
+    videoUrl: "/videos/site_espaco.mp4",
   },
   {
     num: "04",
@@ -839,7 +839,7 @@ const PROJECTS = [
     link: "https://github.com/luiz-grz/DOGO-WORLD",
     liveUrl: "https://the-dogo-world.netlify.app/",
     color: "#7B61FF",
-    videoUrl: "videos/dogo-world.mp4",
+    videoUrl: "/videos/dogo-world.mp4",
   },
   {
     num: "05",
