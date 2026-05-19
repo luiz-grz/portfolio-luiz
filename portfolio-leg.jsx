@@ -839,7 +839,7 @@ const PROJECTS = [
     link: "https://github.com/luiz-grz/DOGO-WORLD",
     liveUrl: "https://the-dogo-world.netlify.app/",
     color: "#7B61FF",
-    videoUrl: "/videos/dogo-world.mp4",
+    videoUrl: "/videos/dogo_world.mp4",
   },
   {
     num: "05",
