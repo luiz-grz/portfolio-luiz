@@ -797,7 +797,7 @@ const PROJECTS = [
     result: "Operação totalmente digitalizada",
     link: "https://github.com/luiz-grz/sistemaespacocuidadosamente",
     color: "var(--elec)",
-    // videoUrl: "/videos/cuidadosamente-demo.mp4",
+    videoUrl: "/videos/sistema_espaco.mp4",
   },
   {
     num: "02",
@@ -844,7 +844,7 @@ const PROJECTS = [
     result: "Ferramenta ágil e precisa",
     link: "https://github.com/luiz-grz/calculadora-ip",
     color: "#00D4FF",
-    // videoUrl: "/videos/calculadora-ip-demo.mp4",
+    videoUrl: "/videos/calculadora_ip.mp4",
   },
 ];
 
