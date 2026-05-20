@@ -1330,6 +1330,7 @@ function Contact() {
               Se quiser conversar sobre tecnologia, colaborar em algo ou apenas trocar uma ideia.
               <br>
               Entre em contato pelo canal que preferir.
+              </br>
             </p>
           </div>
         </Reveal>
