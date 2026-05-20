@@ -477,15 +477,6 @@ function Hero() {
             background: "rgba(56,182,255,0.08)", border: "1px solid rgba(56,182,255,0.2)",
             borderRadius: 100, marginBottom: "1.5rem",
           }} className="hero-badge">
-            <div style={{
-              width: 7, height: 7, borderRadius: "50%", background: "#00FF88",
-              animation: "pulse-glow 2s ease-in-out infinite",
-            }} />
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem",
-              color: "var(--elec)", letterSpacing: "0.08em" }}>
-              Disponível para Oportunidades!
-            </span>
-          </div>
 
           <h2 style={{
             fontFamily: "var(--font-head)", fontWeight: 600,
@@ -1214,7 +1205,7 @@ function About() {
           {[
             { label: "Quem sou", text: "Sou um desenvolvedor fullstack em formação, movido pela curiosidade de entender sistemas de ponta a ponta — desde a interface que o usuário toca até a infraestrutura que suporta tudo por baixo. Atualmente estagiário na Leste Telecom e estudante de Sistemas de Informação." },
             { label: "O que me diferencia", text: "Tenho uma rara combinação entre desenvolvimento web moderno e conhecimento prático de infraestrutura de redes. Isso me permite pensar em soluções que vão além da tela." },
-            { label: "O que busco", text: "Busco minha primeira vaga como desenvolvedor junior ou estágio técnico onde possa crescer, contribuir com produtos reais e evoluir com um time que valoriza qualidade de código e impacto real." },
+            { label: "O que busco", text: "Sou movido por desafios reais e pela vontade de construir coisas que fazem diferença. Estou sempre aberto a novas oportunidades, colaborações e conversas sobre tecnologia. Se tiver um projeto ou uma ideia, pode me chamar." },
           ].map((p, i) => (
             <Reveal key={i} delay={i * 0.12}>
               <div style={{ marginBottom: "1.75rem" }}>
@@ -1342,7 +1333,8 @@ function Contact() {
               color: "var(--text-dim)", marginTop: "1rem", maxWidth: 480, margin: "1rem auto 0",
               lineHeight: 1.75,
             }}>
-              Estou disponível para estágio, vaga júnior ou colaboração em projetos.
+              Estou aberto a novas conexões, projetos e oportunidades que me desafiem a crescer. 
+              Se quiser conversar sobre tecnologia, colaborar em algo ou apenas trocar uma ideia.
               Entre em contato pelo canal que preferir.
             </p>
           </div>
