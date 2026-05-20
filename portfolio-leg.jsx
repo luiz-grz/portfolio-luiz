@@ -1328,10 +1328,15 @@ function Contact() {
             }}>
               Estou aberto a novas conexões, projetos e oportunidades que me desafiem a crescer. 
               Se quiser conversar sobre tecnologia, colaborar em algo ou apenas trocar uma ideia.
-              <br>
-              Entre em contato pelo canal que preferir.
-              </br>
             </p>
+            <p style={{
+              fontFamily: "var(--font-body)", fontSize: "0.95rem",
+              color: "var(--text-dim)", marginTop: "1rem", maxWidth: 480, margin: "1rem auto 0",
+              lineHeight: 1.75,
+            }}>
+              Entre em contato pelo canal que preferir.
+            </p>
+            
           </div>
         </Reveal>
 
