@@ -598,6 +598,7 @@ function Hero() {
           #hero { padding: 6rem 1rem 2rem !important; }
         }
       `}</style>
+      </div>
     </section>
   );
 }
