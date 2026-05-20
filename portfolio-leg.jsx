@@ -477,6 +477,7 @@ function Hero() {
             background: "rgba(56,182,255,0.08)", border: "1px solid rgba(56,182,255,0.2)",
             borderRadius: 100, marginBottom: "1.5rem",
           }} className="hero-badge">
+          </div>   
 
           <h2 style={{
             fontFamily: "var(--font-head)", fontWeight: 600,
