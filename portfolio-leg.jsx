@@ -1328,6 +1328,7 @@ function Contact() {
             }}>
               Estou aberto a novas conexões, projetos e oportunidades que me desafiem a crescer. 
               Se quiser conversar sobre tecnologia, colaborar em algo ou apenas trocar uma ideia.
+              <br>
               Entre em contato pelo canal que preferir.
             </p>
           </div>
