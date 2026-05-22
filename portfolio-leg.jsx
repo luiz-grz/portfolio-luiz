@@ -790,7 +790,7 @@ const PROJECTS = [
     desc: "Plataforma educacional para reforço escolar com design responsivo e elementos interativos, voltada ao aprendizado de matemática.",
     problem: "Falta de material interativo",
     result: "Site educacional responsivo",
-    link: "https://github.com/luiz-grz/StudyMath",
+    link: "https://github.com/luiz-grz/Study-Math",
     liveUrl: "https://reforcostudymath.netlify.app/",
     color: "#00FF88",
     videoUrl: "/videos/Study_math (1).mp4",
